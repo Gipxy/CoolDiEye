@@ -13,6 +13,7 @@ Very cool and lightweight DI framework in Java 1.8+
 * Only support field-based injection (no constructor-based injection)
 * No anotation syntax support
 * No cyclic dependency, lazy, primitive value.. supported yet!
+* Default scope should be "singleton" instead of "prototype" as singleton is more popular to use.
 
 ## Getting Started / Usage Guide
 ### Dependencies
