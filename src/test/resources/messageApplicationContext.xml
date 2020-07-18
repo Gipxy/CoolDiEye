@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="emailService" class="com.david.support.service.EmailService" scope="singleton"/>
+    <bean id="smsService" class="com.david.support.service.SmsService" scope="prototype"/>
+
+    <bean id="messageApp_child_singleton" class="com.david.support.MessageApp">
+        <property name="messageService" ref="emailService"/>
+    </bean>
+
+    <bean id="messageApp_child_prototype" class="com.david.support.MessageApp">
+        <property name="messageService" ref="smsService"/>
+    </bean>
+</beans>

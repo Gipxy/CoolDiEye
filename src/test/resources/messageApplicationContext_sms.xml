@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="smsService" class="com.david.support.service.SmsService"/>
+    <bean id="messageApp" class="com.david.support.MessageApp" scope="singleton">
+        <property name="messageService" ref="smsService"/>
+    </bean>
+</beans>

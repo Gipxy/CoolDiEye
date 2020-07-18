@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="emailService" class="com.david.support.service.EmailService" />
+
+    <bean id="messageApp" class="com.david.support.MessageApp" scope="singleton">
+        <property name="messageService" ref="emailService"/>
+    </bean>
+</beans>
